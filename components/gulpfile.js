@@ -1,6 +1,12 @@
 const gulp = require("gulp");
 const concat = require("gulp-concat");
-const cssFiles = ["./src/scss/main.scss", "./src/scss/media.scss"];
+const cssFiles = [
+  "./src/scss/menu.scss",
+  "./src/scss/modal.scss",
+  "./src/scss/alert.scss",
+  "./src/scss/accordion.scss",
+  "./src/scss/slider.scss"
+];
 const jsFiles = ["./src/js/lip.js", "./src/js/main.js"];
 const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
@@ -9,6 +15,7 @@ const del = require("del");
 //const watch = require("gulp-watch");
 const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
+const fileinclude = require("gulp-file-include");
 
 function styles() {
   return gulp
@@ -42,10 +49,22 @@ function watch() {
       baseDir: "./"
     }
   });
-  gulp.watch("./src/css/**/*.css", styles);
+  gulp.watch("./src/scss/**/*.scss", styles);
   gulp.watch("./src/js/**/*.js", scripts);
   gulp.watch("./*.html").on("change", browserSync.reload);
 }
+
+gulp.task("fileinclude", function() {
+  gulp
+    .src(["index.html"])
+    .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "@file"
+      })
+    )
+    .pipe(gulp.dest("./"));
+});
 gulp.task("styles", styles);
 gulp.task("scripts", scripts);
 gulp.task("del", clean);
