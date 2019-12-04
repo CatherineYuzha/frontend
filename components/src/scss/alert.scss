@@ -1,10 +1,10 @@
 @import "variables";
 .alert {
   padding: 20px;
-  background-color: $hoverColor;
+  background-color: $hover-color;
   color: white;
   margin: 10px;
-  width: $widthBlock;
+  width: $width-block;
   .alert__close {
     margin-left: 15px;
     color: white;

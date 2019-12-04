@@ -19,7 +19,7 @@
   height: 150px;
   .menu__item {
     float: left;
-    .menu__link {
+    &-link {
       color: black;
       display: block;
       height: 50px;

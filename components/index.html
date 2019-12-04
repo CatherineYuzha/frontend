@@ -12,23 +12,23 @@
       <nav class="nav">
         <ul class="menu">
           <li class="menu__item">
-            <a href="" class="menu__link">Обучение</a>
+            <a href="" class="menu__item-link">Обучение</a>
             <ul class="submenu">
-              <li class="submenu__item">
+              <li >
                 <a href="" class="submenu__link">Читаем и пишем </a>
               </li>
-              <li class="submenu__item">
+              <li >
                 <a href="" class="submenu__link">Учим слова</a>
               </li>
-              <li class="submenu__item">
+              <li >
                 <a href="" class="submenu__link">Разговариваем</a>
               </li>
             </ul>
           </li>
-          <li class="menu__item"><a href="" class="menu__link">Лайфхаки</a></li>
-          <li class="menu__item"><a href="" class="menu__link">Блог</a></li>
+          <li class="menu__item"><a href="" class="menu__item-link">Лайфхаки</a></li>
+          <li class="menu__item"><a href="" class="menu__item-link">Блог</a></li>
           <li class="menu__item">
-            <a href="" class="menu__link">Путешествуем</a>
+            <a href="" class="menu__item-link">Путешествуем</a>
           </li>
         </ul>
       </nav>
@@ -64,39 +64,38 @@
     </div>
     <div id="slider" class="slider">
       <ul class="slider__indicators">
-        <li
-          class="slider__indicator slider__indicator_active"
-          data-slide-to="0"
-        ></li>
-        <li class="slider__indicator" data-slide-to="1"></li>
-        <li class="slider__indicator" data-slide-to="2"></li>
-        <li class="slider__indicator" data-slide-to="3"></li>
+        <li class="slider__indicators-indicator slider__indicators_active" data-slide-to="0"></li>
+        <li class="slider__indicators-indicator" data-slide-to="1"></li>
+        <li class="slider__indicators-indicator" data-slide-to="2"></li>
+        <li class="slider__indicators-indicator" data-slide-to="3"></li>
       </ul>
       <div class="slider__items">
-        <div class="slider__item slider__item_active">
-          <img src="./src/img/1.jpg" class="slider__img">
+        <div class="slider__items-item slider__items_active">
+          <img src="./src/img/1.jpg" class="slider__items-item-img">
         </a>
-        <div class="slider__item" >
-          <img src="./src/img/2.jpg" class="slider__img">
+        <div class="slider__items-item" >
+          <img src="./src/img/2.jpg" class="slider__items-item-img">
         </img>
-        <div class="slider__item" class="slider__img">
-          <img src="./src/img/3.jpg">
+        <div class="slider__items-item" >
+          <img src="./src/img/3.jpg" class="slider__items-item-img">
         </div>
-        <div class="slider__item" class="slider__img">
-          <img src="./src/img/4.jpg">
+        <div class="slider__items-item" >
+          <img src="./src/img/4.jpg" class="slider__items-item-img">
         </div>
       </div>
      </div>
     </div>
     </div>
     
+
+
     <div id="open_modal" class="modal">
        <div class="modal__dialog">
-        <div class="modal__header">
-          <h3 class="modal__title">Подпишись на нашу рассылку</h3>
-          <a href="#close" class="modal__close">×</a>
+        <div class="modal__dialog-header">
+          <h3 class="modal__dialog-header-title">Подпишись на нашу рассылку</h3>
+          <a href="#close" class="modal__dialog-header-close">×</a>
         </div>
-        <div class="modal__body">
+        <div class="modal__dialog-body">
           <p>Содержимое модального окна...</p>
         </div>
       </div>
@@ -104,6 +103,9 @@
     <div class="button">
       <a href="#open_modal" class="button__link">Подписаться</a>
     </div>
+
+
+
   <div class="alert">
     Ошибка
     <a href="#close" class="alert__close">×</a>
