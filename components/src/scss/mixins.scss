@@ -1,0 +1,21 @@
+@import "variables";
+@mixin font {
+  font-family: $font;
+  font-size: $font-size;
+}
+@mixin hoverButton {
+  &:hover {
+    background: white;
+    color: $hover-color;
+    transition: all 0.3s;
+    box-shadow: 0 5px 0 white;
+    border: 1px solid $hover-color;
+    border-radius: $border-radius;
+  }
+}
+@mixin hoverMenu {
+  &:hover {
+    transition: 0.3s;
+    border-bottom: 2px solid $main-color;
+  }
+}
