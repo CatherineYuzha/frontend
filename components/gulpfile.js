@@ -7,7 +7,13 @@ const cssFiles = [
   "./src/scss/accordion.scss",
   "./src/scss/slider.scss"
 ];
-const jsFiles = ["./src/js/lip.js", "./src/js/main.js"];
+const jsFiles = [
+  "./src/js/accordion.js",
+  "./src/js/alert.js",
+  "./src/js/menu.js",
+  "./src/js/modal.js",
+  "./src/js/slider.js"
+];
 const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
