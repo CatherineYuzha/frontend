@@ -1,17 +1,21 @@
-var modal = document.getElementById("modal");
-var open = document.getElementById("open_modal");
-var close = document.getElementsByClassName("modal__dialog-header-close")[0];
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("DOM fully loaded and parsed");
 
-open.onclick = function() {
-  modal.style.display = "block";
-};
+  var modal = document.querySelector(".js-modal");
+  var open = document.querySelector(".js-button");
+  var close = document.querySelector(".js-modal__dialog-header-close");
 
-close.onclick = function() {
-  modal.style.display = "none";
-};
+  open.addEventListener("click", function() {
+    modal.style.display = "block";
+  });
 
-window.onclick = function(event) {
-  if (event.target == modal) {
+  close.addEventListener("click", function() {
     modal.style.display = "none";
-  }
-};
+  });
+
+  window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
