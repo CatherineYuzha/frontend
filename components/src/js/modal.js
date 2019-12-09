@@ -2,17 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log("DOM fully loaded and parsed");
 
   var modal = document.querySelector(".js-modal");
-  var open = document.querySelector(".js-button");
-  var close = document.querySelector(".js-modal__dialog-header-close");
+  var openButton = document.querySelector(".js-button");
+  var closeButton = document.querySelector(".js-close");
 
-  open.addEventListener("click", function() {
-    modal.style.display = "block";
+  openButton.addEventListener("click", function() {
+    modal.classList.toggle("modal_closed");
   });
-
-  close.addEventListener("click", function() {
-    modal.style.display = "none";
+  closeButton.addEventListener("click", function() {
+    modal.classList.toggle("modal_closed");
   });
-
   window.addEventListener("click", function(event) {
     if (event.target === modal) {
       modal.style.display = "none";

@@ -69,4 +69,7 @@ body {
       overflow: auto;
     }
   }
+  &_closed {
+    display: block;
+  }
 }

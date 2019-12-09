@@ -32,3 +32,6 @@
     transition: max-height 0.2s ease-out;
   }
 }
+.accordion__button.active + .accordion__content {
+  display: block;
+}

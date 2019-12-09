@@ -39,7 +39,7 @@
     </header>
     <div class="accordion">
       <button class="accordion__button" type="button">Вкладка 1</button>
-      <div class="accordion__content">
+      <div class="accordion__content active">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
           explicabo, ducimus perferendis velit veritatis natus beatae officiis
@@ -93,20 +93,19 @@
         </div>
       </div>
     </div>
-    <button class="button js-button">Подписаться</button>
-    <div class="modal js-modal">
+
+    <div class="modal js-modal modal_closed">
       <div class="modal__dialog">
         <div class="modal__dialog-header">
           <h3 class="modal__dialog-header-title">Подпишись на нашу рассылку</h3>
-          <span class="modal__dialog-header-close js-modal__dialog-header-close"
-            >×</span
-          >
+          <span class="modal__dialog-header-close js-close">×</span>
         </div>
         <div class="modal__dialog-body">
           <p>Содержимое модального окна...</p>
         </div>
       </div>
     </div>
+    <button class="button js-button ">Подписаться</button>
 
     <div class="alert">
       Ошибка
