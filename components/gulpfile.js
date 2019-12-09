@@ -16,12 +16,10 @@ const jsFiles = [
 ];
 const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
-const uglify = require("gulp-uglify");
+const uglify = require("gulp-uglify-es").default;
 const del = require("del");
-//const watch = require("gulp-watch");
 const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
-const fileinclude = require("gulp-file-include");
 
 function styles() {
   return gulp
@@ -60,17 +58,6 @@ function watch() {
   gulp.watch("./*.html").on("change", browserSync.reload);
 }
 
-gulp.task("fileinclude", function() {
-  gulp
-    .src(["index.html"])
-    .pipe(
-      fileinclude({
-        prefix: "@@",
-        basepath: "@file"
-      })
-    )
-    .pipe(gulp.dest("./"));
-});
 gulp.task("styles", styles);
 gulp.task("scripts", scripts);
 gulp.task("del", clean);

@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-  console.log("DOM fully loaded and parsed");
-
-  var modal = document.querySelector(".js-modal");
-  var openButton = document.querySelector(".js-button");
-  var closeButton = document.querySelector(".js-close");
+  const modal = document.querySelector(".js-modal");
+  const openButton = document.querySelector(".js-button");
+  const closeButton = document.querySelector(".js-close");
 
   openButton.addEventListener("click", function() {
     modal.classList.toggle("modal_closed");
